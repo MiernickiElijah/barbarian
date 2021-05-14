@@ -20,5 +20,6 @@ https://getbootstrap.com/docs/4.0/components/alerts/
 https://stackoverflow.com/questions/62271505/how-can-i-set-different-colors-for-time-blocks-in-a-calendar-or-day-planner-usin
 https://moment.github.io/luxon/docs/class/src/datetime.js~DateTime.html#instance-method-toLocaleString
 https://www.youtube.com/watch?v=vAuUzEwTbck
+https://www.w3schools.com/jquery/jquery_css_classes.asp
 
 

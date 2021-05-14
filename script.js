@@ -13,7 +13,7 @@ var userInputs = [
     { time: 5, input: "" },
 ];
 
-//Live Date and Time//
+//Live Date and Time for header//
 setInterval(function () {
     var now = luxon.DateTime.now().toLocaleString({ weekday: 'long', month: 'short', day: '2-digit', hour: '2-digit', minute: '2-digit', second: '2-digit' });
     luxon.DateTime.local().toString();
@@ -21,12 +21,20 @@ setInterval(function () {
     $('#currentDay').text(now);
 }, 1000)
 
-
-//compare time to schedule change class for color//
 var milTime = luxon.DateTime.now().hour;
-
-
+//compare time to schedule change class for color//
+function colorClock() {
+    if (milTime === 7) {
+        $(".col.col-lg-8.future.textarea.description.7").addClass("present").removeClass("past future");
+    } if (milTime > 7) {
+        $(".col.col-lg-8.future.textarea.description.7").addClass("past").removeClass("present future");
+    } else {
+        $(".col.col-lg-8.future.textarea.description.7").addClass("future").removeClass("present past");
+    };
+};
+colorClock();
 console.log(milTime);
+
 
 
 //get military time from luxon//
