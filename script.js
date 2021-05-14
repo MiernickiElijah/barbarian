@@ -121,34 +121,22 @@ colorClock15();
 colorClock16();
 colorClock17();
 
+var userInputs = localStorage.getItem('userInputs')
+var userTextInput = $("#text").textContent;
+var allContent = $("#content")
 
-//retrieve all key value pairs from local storage and wrtie to DOM //
-function loadEvents() {
-    var userTextInputs = localStorage.getItem("userInputs");
-    function displayUserTextInputs(type, message) {
-        textarea.textContent = message;
-        textarea.setAttribute("userInputs", type)
-    }
-}
-loadEvents();
-
-
-
-//saved to local storage on click //
-var userTextInput = $(".textarea").textContent;
-var allContnet = $("#content")
-
-allContnet.on("click", ".saveBtn", function (event) {
+//saved to local storage on click // ---------------------Why is it just the first "text" field???????
+allContent.on("click", ".saveBtn", function (event) {
     event.preventDefault();
-    var userTextInput = document.querySelector("textarea").value;
-    localStorage.setItem("userInputs", userTextInput);
+    var userTextInput = document.getElementById("text").value.trim();
+    localStorage.setItem("userInputs", JSON.stringify(userTextInput));
 });
 
-//get from local storage
-//make into JSON 
-//loop through properties 
-//week 4 activity 24 &2 5 
-
-//data attr based on the time in first column// for save button and for text area //
-
-//data attr on both text area and button //
+//retrieve all key value pairs from local storage and wrtie to DOM // ----------why no work???????
+function loadEvents() {
+    userTextInput = JSON.parse(window.localStorage.getItem("userInputs"));
+    if (userTextInput !== null) {
+        $("#text").textContent = userTextInput.value
+    };
+};
+loadEvents();
