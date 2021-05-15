@@ -122,8 +122,8 @@ colorClock16();
 colorClock17();
 
 var userInputs = localStorage.getItem('userInputs')
-var userTextInput = $("#text").textContent; //changed text to id//
-var allContent = $("#content")
+var userTextInput = $('#text').textContent; //changed text to id//
+var allContent = $('#content')
 
 
 //saved to local storage on click // ---------------------Why is it just the first "text" field???????
@@ -133,12 +133,25 @@ allContent.on("click", ".saveBtn", function () {
     localStorage.setItem(hourText, value);
 });
 
+$('#hour7 .description').val(localStorage.getItem('hour7'));
+$('#hour8 .description').val(localStorage.getItem('hour8'));
+$('#hour9 .description').val(localStorage.getItem('hour9'));
+$('#hour10 .description').val(localStorage.getItem('hour10'));
+$('#hour11 .description').val(localStorage.getItem('hour11'));
+$('#hour12 .description').val(localStorage.getItem('hour12'));
+$('#hour13 .description').val(localStorage.getItem('hour13'));
+$('#hour14 .description').val(localStorage.getItem('hour14'));
+$('#hour15 .description').val(localStorage.getItem('hour15'));
+$('#hour16 .description').val(localStorage.getItem('hour16'));
+$('#hour17 .description').val(localStorage.getItem('hour17'));
+
+
 
 //retrieve all key value pairs from local storage and wrtie to DOM // ----------why no work???????
-function loadEvents() {
-    userTextInput = JSON.parse(window.localStorage.getItem(hourText));
-    if (userTextInput !== null) {
-        $(".text").textContent = userTextInput.value
-    };
-};
-loadEvents();
+// function loadEvents() {
+//     userTextInput = JSON.parse(window.localStorage.getItem(hourText));
+//     if (userTextInput !== null) {
+//         $(".text").textContent = userTextInput.value
+//     };
+// };
+// loadEvents();

@@ -1,5 +1,5 @@
 # barbarian
-This is a scheduler that allows users to save written notes via time to thier local computer. 
+This is a scheduler that allows users to save written notes via time to their local computer. 
 
 
 ## Image
