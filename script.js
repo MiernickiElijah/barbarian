@@ -122,21 +122,23 @@ colorClock16();
 colorClock17();
 
 var userInputs = localStorage.getItem('userInputs')
-var userTextInput = $("#text").textContent;
+var userTextInput = $("#text").textContent; //changed text to id//
 var allContent = $("#content")
 
+
 //saved to local storage on click // ---------------------Why is it just the first "text" field???????
-allContent.on("click", ".saveBtn", function (event) {
-    event.preventDefault();
-    var userTextInput = document.getElementById("text").value.trim();
-    localStorage.setItem("userInputs", JSON.stringify(userTextInput));
+allContent.on("click", ".saveBtn", function () {
+    let value = $(this).siblings('.description').val();
+    var hourText = $(this).parent().attr('id');
+    localStorage.setItem(hourText, value);
 });
+
 
 //retrieve all key value pairs from local storage and wrtie to DOM // ----------why no work???????
 function loadEvents() {
-    userTextInput = JSON.parse(window.localStorage.getItem("userInputs"));
+    userTextInput = JSON.parse(window.localStorage.getItem(hourText));
     if (userTextInput !== null) {
-        $("#text").textContent = userTextInput.value
+        $(".text").textContent = userTextInput.value
     };
 };
 loadEvents();

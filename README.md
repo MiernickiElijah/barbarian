@@ -3,7 +3,7 @@ This is a scheduler that allows users to save written notes via time to thier lo
 
 
 ## Image
-![screenshot]("\assets\screenshot.png")
+![screenshot]("\screenshot.png")
 
 ### Specifications
 
