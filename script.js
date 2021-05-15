@@ -8,7 +8,7 @@ setInterval(function () {
 }, 1000)
 
 var milTime = luxon.DateTime.now().hour;
-//compare time to schedule change class for color//
+//compare time to schedule & change classes for CSS//
 function colorClock7() {
     if (milTime === 7) {
         $(".col.col-lg-8.future.textarea.description.7").addClass("present").removeClass("past future");
@@ -108,6 +108,7 @@ function colorClock17() {
         $(".col.col-lg-8.future.textarea.description.17").addClass("future").removeClass("present past");
     };
 };
+
 //run the clocks for each row//
 colorClock7();
 colorClock8();
@@ -122,17 +123,18 @@ colorClock16();
 colorClock17();
 
 var userInputs = localStorage.getItem('userInputs')
-var userTextInput = $('#text').textContent; //changed text to id//
+var userTextInput = $('#text').textContent;
 var allContent = $('#content')
 
 
-//saved to local storage on click // ---------------------Why is it just the first "text" field???????
+//saved to local storage on click//
 allContent.on("click", ".saveBtn", function () {
     let value = $(this).siblings('.description').val();
     var hourText = $(this).parent().attr('id');
     localStorage.setItem(hourText, value);
 });
 
+//get item from local storage//
 $('#hour7 .description').val(localStorage.getItem('hour7'));
 $('#hour8 .description').val(localStorage.getItem('hour8'));
 $('#hour9 .description').val(localStorage.getItem('hour9'));
@@ -144,14 +146,3 @@ $('#hour14 .description').val(localStorage.getItem('hour14'));
 $('#hour15 .description').val(localStorage.getItem('hour15'));
 $('#hour16 .description').val(localStorage.getItem('hour16'));
 $('#hour17 .description').val(localStorage.getItem('hour17'));
-
-
-
-//retrieve all key value pairs from local storage and wrtie to DOM // ----------why no work???????
-// function loadEvents() {
-//     userTextInput = JSON.parse(window.localStorage.getItem(hourText));
-//     if (userTextInput !== null) {
-//         $(".text").textContent = userTextInput.value
-//     };
-// };
-// loadEvents();
