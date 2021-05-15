@@ -7,13 +7,13 @@ This is a scheduler that allows users to save written notes via time to their lo
 
 ### Specifications
 
-* User on a time they can enter in information 
+* User can enter in information/tasks by hour increment
 
 * When a user clicks on the save button it saves the entered information to the local file
 
 * When a user reloads the page the information is pulled from the local file
 
-* When user clicks on a file it turns color, when time is > then left column it greys out.
+* Automatically change the background color of the row based on hour of day for past, present, and future times
 
 ## 💡 Notes
 https://getbootstrap.com/docs/4.0/components/alerts/
