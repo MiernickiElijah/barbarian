@@ -15,6 +15,9 @@ This is a scheduler that allows users to save written notes via time to their lo
 
 * Automatically change the background color of the row based on hour of day for past, present, and future times
 
+### Link to live:
+https://miernickielijah.github.io/barbarian/
+
 ## 💡 Notes
 https://getbootstrap.com/docs/4.0/components/alerts/
 https://stackoverflow.com/questions/62271505/how-can-i-set-different-colors-for-time-blocks-in-a-calendar-or-day-planner-usin
